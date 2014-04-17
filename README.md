@@ -1,6 +1,12 @@
 # TabSwitch
 
-<TODO DESC>
+TabSwitch is developed for the NetBeans IDE.
+TabSwitch allowes you to switch the editor-tabs in the NetBeans IDE in the way browsers like Chrome &copy; or Firefox &copy; do.©
+To switch to the left tab from the currently active one simply use <code>⌥ + Ctrl/⌘ + ⍇ (LeftArrow)<code>. 
+To switch to the right tab simply use <code>⌥ + Ctrl/⌘ + ⍈ (RightArrow)<code>. 
+
+## Bugs
+- No known Bugs until now ;)
 
 ## Make a Release
 - [Maven Release Plugin: The Final Nail in the Coffin](http://axelfontaine.com/blog/final-nail.html)
@@ -8,7 +14,7 @@
 1. Checking the software out: <code>git clone</code>
 2. Giving it a version: <code>mvn versions:set</code>
 3. Building, testing, packaging and deploying it to an artifact repository: <code>mvn deploy</code>
-4. Tagging this state in SCM: <code>mvn scm:tag</code
+4. Tagging this state in SCM: <code>mvn scm:tag</code>
 
 ## Sources
 
