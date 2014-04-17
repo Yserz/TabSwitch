@@ -32,6 +32,7 @@ TabSwitch allowes you to switch the editor-tabs in the NetBeans&copy; IDE in the
 - [NetBeans Platform Learning Trail](https://netbeans.org/features/platform/all-docs.html)
 - [DZone Refcardz Netbeans Platform 7.0](http://refcardz.dzone.com/refcardz/netbeans-platform-70)
 - [NetBeans Platform Teaching Resources](https://edu.netbeans.org/contrib/slides/netbeans-platform/)
+- [NetBeans Platform 8.0 JavaDoc KeyStroke](http://bits.netbeans.org/dev/javadoc/org-openide-util/org/openide/util/Utilities.html#keyToString(javax.swing.KeyStroke))
 
 ### Maven Release
 - [Maven Release Plugin: The Final Nail in the Coffin](http://axelfontaine.com/blog/final-nail.html)
