@@ -1,9 +1,9 @@
 # TabSwitch
 
 TabSwitch is developed for the NetBeans IDE.
-TabSwitch allowes you to switch the editor-tabs in the NetBeans IDE in the way browsers like Chrome &copy; or Firefox &copy; do.©
-To switch to the left tab from the currently active one simply use <code>⌥ + Ctrl/⌘ + ⍇ (LeftArrow)<code>. 
-To switch to the right tab simply use <code>⌥ + Ctrl/⌘ + ⍈ (RightArrow)<code>. 
+TabSwitch allowes you to switch the editor-tabs in the NetBeans IDE in the way browsers like Chrome &copy; or Firefox &copy; do.
+To switch to the left tab from the currently active one simply use <code>⌥ + Ctrl/⌘ + &#8592; </code>. 
+To switch to the right tab simply use <code>⌥ + Ctrl/⌘ + &#8594; </code>. 
 
 ## Bugs
 - No known Bugs until now ;)
