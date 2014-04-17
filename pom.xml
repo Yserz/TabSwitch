@@ -47,6 +47,10 @@
     <scm>
         <connection>scm:git:git@github.com:Yserz/TabSwitch.git</connection>
     </scm>
+    <issueManagement>
+        <system>GitHub Issue Management</system>
+        <url>https://github.com/Yserz/TabSwitch/issues</url>
+    </issueManagement>
     <distributionManagement>
         <repository>
             <id>maven-own-repo</id>
@@ -58,7 +62,6 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--<maven.license.licenseFile>LICENSE.txt</maven.license.licenseFile>-->
         <maven.nbm.requiresrestart>false</maven.nbm.requiresrestart>
     </properties>
     

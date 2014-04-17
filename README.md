@@ -20,6 +20,9 @@ You can download the first snapshot-version from [here](https://bitbucket.org/Ys
 ## Bugs
 - No known Bugs until now ;)
 
+## Issue Management
+If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
+
 ## Make a Release
 - [Maven Release Plugin: The Final Nail in the Coffin](http://axelfontaine.com/blog/final-nail.html)
 
@@ -35,9 +38,11 @@ You can download the first snapshot-version from [here](https://bitbucket.org/Ys
 - [DZone Refcardz Netbeans Platform 7.0](http://refcardz.dzone.com/refcardz/netbeans-platform-70)
 - [NetBeans Platform Teaching Resources](https://edu.netbeans.org/contrib/slides/netbeans-platform/)
 - [NetBeans Platform 8.0 JavaDoc KeyStroke](http://bits.netbeans.org/dev/javadoc/org-openide-util/org/openide/util/Utilities.html#keyToString(javax.swing.KeyStroke))
+- [NetBeans Platform Maven NBM Plugin](http://mojo.codehaus.org/nbm-maven/nbm-maven-plugin/nbm-mojo.html)
 
-### Maven Release
+### Maven Release Sources
 - [Maven Release Plugin: The Final Nail in the Coffin](http://axelfontaine.com/blog/final-nail.html)
 
 ### Markdown Sources
 - [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax)
+- [HTML Codes](http://character-code.com/arrows-html-codes.php)
