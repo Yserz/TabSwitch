@@ -1,7 +1,6 @@
 # TabSwitch
-
 TabSwitch is developed for the NetBeans&copy; IDE.
-TabSwitch allowes you to switch the editor-tabs in the NetBeans&copy; IDE in the way browsers, like Chrome&copy; or Firefox&copy;, do.
+TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome&copy; and XtraFinder&copy; do.
 
 ##### To switch to the left tab from the currently active one simply use 
 

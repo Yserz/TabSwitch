@@ -27,16 +27,17 @@
     <name>TabSwitcher</name>
     <inceptionYear>2014</inceptionYear>
     <description>
-        TabSwitch is developed for the NetBeans&copy; IDE.
-        TabSwitch allowes you to switch the editor-tabs in the NetBeans&copy; IDE in the way browsers, like Chrome&copy; or Firefox&copy;, do.
+        TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome&copy; and XtraFinder&copy; do.
     </description>
     <licenses>
         <license>
             <name>GNU General Public License</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0</url>
-            <distribution>manual</distribution>
+            <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
         </license>
     </licenses>
+    <organization>
+        <name>Michael Koppen</name>
+    </organization>
     <developers>
         <developer>
             <name>Michael Koppen</name>
@@ -57,6 +58,8 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--<maven.license.licenseFile>LICENSE.txt</maven.license.licenseFile>-->
+        <maven.nbm.requiresrestart>false</maven.nbm.requiresrestart>
     </properties>
     
     <repositories>
@@ -110,6 +113,13 @@
             <artifactId>org-openide-awt</artifactId>
             <version>RELEASE80</version>
         </dependency>
+        <!-- TEST -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-libs-junit4</artifactId>
+            <version>RELEASE80</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -119,6 +129,8 @@
                 <version>3.13</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <licenseName>GNU Public License 3.0</licenseName>
+                    <licenseFile>LICENSE.txt</licenseFile>
                     <publicPackages>
                         <publicPackage>de.yser.tabswitcher</publicPackage>
                     </publicPackages>
