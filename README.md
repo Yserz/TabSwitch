@@ -13,7 +13,7 @@ TabSwitch allowes you to switch the editor-tabs in the NetBeans IDE in the way b
 
 - <code>⌥ + ⌘ + &#8594; </code> for Mac OS X,
 - <code>Alt + Ctrl + &#8594; </code> for Windows & Linux or
-- Click on <code>Navigate -> TabSwitch Left</code>.
+- Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Bugs
 - No known Bugs until now ;)
