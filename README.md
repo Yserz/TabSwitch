@@ -15,7 +15,7 @@ TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download the first snapshot-version from [here](https://bitbucket.org/Yserz/ownmavenrepo/src/e65db1efd6ef30e5fddbc37daa310469f53b70d3/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140417.175008-1.nbm?at=master).
+You can download the first snapshot-version from [here](https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140417.211348-2.nbm).
 
 ## Bugs
 - No known Bugs until now ;)
