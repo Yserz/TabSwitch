@@ -27,7 +27,8 @@
     <name>TabSwitcher</name>
     <inceptionYear>2014</inceptionYear>
     <description>
-        TabSwitcher enables...
+        TabSwitch is developed for the NetBeans&copy; IDE.
+        TabSwitch allowes you to switch the editor-tabs in the NetBeans&copy; IDE in the way browsers, like Chrome&copy; or Firefox&copy;, do.
     </description>
     <licenses>
         <license>
