@@ -26,7 +26,7 @@ limitations under the License.
     <inceptionYear>2014</inceptionYear>
     <description><![CDATA[
         <b>TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome &copy; and XtraFinder&copy; do.</b>
-        One could say NetBeans already provides this kind of functionality but in distinction to the build-in feature of the NetBeans IDE 
+        One could say NetBeans already provides this kind of functionality but in distinction to the build-in feature of the NetBeans IDE, 
         TabSwitch does not loose the context of the project. So if you use the tab-row-per-project-feature TabSwitch will not jump between different tab-rows like the build-in NetBeans IDE feature does.
         
         
@@ -79,7 +79,6 @@ limitations under the License.
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.nbm.requiresrestart>false</maven.nbm.requiresrestart>
     </properties>
     
     <repositories>
@@ -133,13 +132,6 @@ limitations under the License.
             <artifactId>org-openide-awt</artifactId>
             <version>RELEASE80</version>
         </dependency>
-        <!-- TEST -->
-        <dependency>
-            <groupId>org.netbeans.api</groupId>
-            <artifactId>org-netbeans-libs-junit4</artifactId>
-            <version>RELEASE80</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-projectapi</artifactId>
@@ -152,6 +144,13 @@ limitations under the License.
             <type>jar</type>
             <version>RELEASE80</version>
         </dependency>
+        <!-- TEST -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-libs-junit4</artifactId>
+            <version>RELEASE80</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -163,6 +162,7 @@ limitations under the License.
                 <configuration>
                     <licenseName>GNU Public License 3.0</licenseName>
                     <licenseFile>LICENSE.txt</licenseFile>
+                    <requiresRestart>false</requiresRestart>
                     <publicPackages>
                         <publicPackage>de.yser.tabswitcher</publicPackage>
                     </publicPackages>

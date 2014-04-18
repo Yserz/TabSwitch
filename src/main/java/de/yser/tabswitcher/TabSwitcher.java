@@ -15,7 +15,8 @@
  */
 package de.yser.tabswitcher;
 
-import java.util.List;
+import de.yser.tabswitcher.impl.NoRelatedProjectFoundException;
+import java.util.LinkedList;
 import java.util.Map;
 import org.netbeans.api.project.Project;
 import org.openide.windows.TopComponent;
@@ -33,7 +34,7 @@ public interface TabSwitcher {
 	 *
 	 * @return list of TopComponents.
 	 */
-	public Map<Project, List<TopComponent>> getAllOpenedTabs();
+	public Map<Project, LinkedList<TopComponent>> getAllOpenedEditorTabs();
 
 	/**
 	 * Returns the currently active tab in 'editor' WindowMode.
@@ -46,17 +47,49 @@ public interface TabSwitcher {
 	 * Returns the right tab from the currently active tab in 'editor'
 	 * WindowMode.
 	 *
-	 * @return TopComponent
+	 * @return TopComponent of the tab
+	 * @throws de.yser.tabswitcher.impl.NoRelatedProjectFoundException
 	 */
-	public TopComponent getRightTab();
+	public TopComponent getNextTab() throws NoRelatedProjectFoundException;
 
 	/**
 	 * Returns the left tab from the currently active tab in 'editor'
 	 * WindowMode.
 	 *
-	 * @return TopComponent
+	 * @return TopComponent of the tab
+	 * @throws de.yser.tabswitcher.impl.NoRelatedProjectFoundException
 	 */
-	public TopComponent getLeftTab();
+	public TopComponent getLeftTab() throws NoRelatedProjectFoundException;
+
+	/**
+	 * Returns the first tab of the upper project from the currently active
+	 * project tab in the 'editor' WindowMode.
+	 *
+	 * @return TopComponent of the tab
+	 * @throws NoRelatedProjectFoundException
+	 */
+	public TopComponent getLastTabOfUpperProject() throws NoRelatedProjectFoundException;
+
+	/**
+	 * Returns the first tab of the below project from the currently active
+	 * project tab in the 'editor' WindowMode.
+	 *
+	 * @return TopComponent of the tab
+	 * @throws NoRelatedProjectFoundException
+	 */
+	public TopComponent getFirstTabOfBelowProject() throws NoRelatedProjectFoundException;
+
+	/**
+	 * Sets the focus on the first tab of the upper project of the currently
+	 * active project tab in 'editor' WindowMode.
+	 */
+	public void activateFirstTabOfUpperProject();
+
+	/**
+	 * Sets the focus on the first tab of the below project of the currently
+	 * active project tab in 'editor' WindowMode.
+	 */
+	public void activateLastTabOfBelowProject();
 
 	/**
 	 * Sets the focus on the right tab of the currently active tab in 'editor'
