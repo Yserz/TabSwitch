@@ -62,36 +62,6 @@ public interface TabSwitcher {
 	public TopComponent getLeftTab() throws NoRelatedProjectFoundException;
 
 	/**
-	 * Returns the first tab of the upper project from the currently active
-	 * project tab in the 'editor' WindowMode.
-	 *
-	 * @return TopComponent of the tab
-	 * @throws NoRelatedProjectFoundException
-	 */
-	public TopComponent getLastTabOfUpperProject() throws NoRelatedProjectFoundException;
-
-	/**
-	 * Returns the first tab of the below project from the currently active
-	 * project tab in the 'editor' WindowMode.
-	 *
-	 * @return TopComponent of the tab
-	 * @throws NoRelatedProjectFoundException
-	 */
-	public TopComponent getFirstTabOfBelowProject() throws NoRelatedProjectFoundException;
-
-	/**
-	 * Sets the focus on the first tab of the upper project of the currently
-	 * active project tab in 'editor' WindowMode.
-	 */
-	public void activateFirstTabOfUpperProject();
-
-	/**
-	 * Sets the focus on the first tab of the below project of the currently
-	 * active project tab in 'editor' WindowMode.
-	 */
-	public void activateLastTabOfBelowProject();
-
-	/**
 	 * Sets the focus on the right tab of the currently active tab in 'editor'
 	 * WindowMode.
 	 */

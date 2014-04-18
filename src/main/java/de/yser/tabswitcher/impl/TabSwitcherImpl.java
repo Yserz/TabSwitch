@@ -119,7 +119,26 @@ public class TabSwitcherImpl implements TabSwitcher {
 	}
 
 	@Override
-	public TopComponent getLastTabOfUpperProject() throws NoRelatedProjectFoundException {
+	public void activateRightTab() {
+		try {
+			TopComponent rightTab = getNextTab();
+			rightTab.requestActive();
+		} catch (NoRelatedProjectFoundException ex) {
+			Exceptions.printStackTrace(ex);
+		}
+	}
+
+	@Override
+	public void activateLeftTab() {
+		try {
+			TopComponent leftTab = getLeftTab();
+			leftTab.requestActive();
+		} catch (NoRelatedProjectFoundException ex) {
+			Exceptions.printStackTrace(ex);
+		}
+	}
+
+	private TopComponent getLastTabOfUpperProject() throws NoRelatedProjectFoundException {
 		LinkedHashMap<Project, LinkedList<TopComponent>> openTabs = getAllOpenedEditorTabs();
 		TopComponent activeComponent = getActiveTab();
 		Project projectOfActiveComponent = getProjectOfTab(activeComponent);
@@ -159,8 +178,7 @@ public class TabSwitcherImpl implements TabSwitcher {
 		return null;
 	}
 
-	@Override
-	public TopComponent getFirstTabOfBelowProject() throws NoRelatedProjectFoundException {
+	private TopComponent getFirstTabOfBelowProject() throws NoRelatedProjectFoundException {
 		LinkedHashMap<Project, LinkedList<TopComponent>> openTabs = getAllOpenedEditorTabs();
 		TopComponent activeComponent = getActiveTab();
 		Project projectOfActiveComponent = getProjectOfTab(activeComponent);
@@ -200,46 +218,6 @@ public class TabSwitcherImpl implements TabSwitcher {
 		return null;
 	}
 
-	@Override
-	public void activateFirstTabOfUpperProject() {
-		try {
-			TopComponent upperTab = getLastTabOfUpperProject();
-			upperTab.requestActive();
-		} catch (NoRelatedProjectFoundException ex) {
-			Exceptions.printStackTrace(ex);
-		}
-	}
-
-	@Override
-	public void activateLastTabOfBelowProject() {
-		try {
-			TopComponent belowTab = getFirstTabOfBelowProject();
-			belowTab.requestActive();
-		} catch (NoRelatedProjectFoundException ex) {
-			Exceptions.printStackTrace(ex);
-		}
-	}
-
-	@Override
-	public void activateRightTab() {
-		try {
-			TopComponent rightTab = getNextTab();
-			rightTab.requestActive();
-		} catch (NoRelatedProjectFoundException ex) {
-			Exceptions.printStackTrace(ex);
-		}
-	}
-
-	@Override
-	public void activateLeftTab() {
-		try {
-			TopComponent leftTab = getLeftTab();
-			leftTab.requestActive();
-		} catch (NoRelatedProjectFoundException ex) {
-			Exceptions.printStackTrace(ex);
-		}
-	}
-
 	private Project getProjectOfTab(TopComponent topComponent) throws NoRelatedProjectFoundException {
 		Project p;
 		if (topComponent == null) {
@@ -253,13 +231,6 @@ public class TabSwitcherImpl implements TabSwitcher {
 				FileObject fo = dob.getPrimaryFile();
 				p = FileOwnerQuery.getOwner(fo);
 			}
-		}
-
-		// Debugging
-		if (p == null) {
-			LOG.log(Level.INFO, "Can't find project for TopComponent {0} ", new Object[]{topComponent.getDisplayName()});
-		} else {
-			LOG.log(Level.INFO, "TopComponent {0} relates to project {1}", new Object[]{topComponent.getDisplayName(), p.getProjectDirectory()});
 		}
 
 		return p;
