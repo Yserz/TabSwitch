@@ -22,14 +22,31 @@ limitations under the License.
     <packaging>nbm</packaging>
     
     <name>TabSwitcher</name>
+    <url>https://github.com/Yserz/TabSwitch</url>
     <inceptionYear>2014</inceptionYear>
-    <description>
-        TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome&copy; and XtraFinder&copy; do.
+    <description><![CDATA[
+        <b>TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome &copy; and XtraFinder&copy; do.</b>
+        
+        
+        <p>To switch to the left tab from the currently active one simply use: 
+        <ul>
+            <li>⌥ + ⌘ + ←  for Mac OS X,</li>
+            <li>Alt + Ctrl + ←  for Windows & Linux or</li>
+            <li>Click on Navigate -> TabSwitch Left.</li>
+        </ul>
+        
+        To switch to the right tab simply use: 
+        <ul>
+            <li>⌥ + ⌘ + ➝  for Mac OS X,</li>
+            <li>Alt + Ctrl + ➝  for Windows & Linux or</li>
+            <li>Click on Navigate -> TabSwitch Right.</li>
+        </ul></p>
+        ]]>
     </description>
     <licenses>
         <license>
-            <name>GNU General Public License</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
     <organization>
@@ -39,6 +56,7 @@ limitations under the License.
         <developer>
             <name>Michael Koppen</name>
             <email>michael.koppen@googlemail.com</email>
+            <url>https://github.com/Yserz/</url>
         </developer>
     </developers>
     <scm>
@@ -120,6 +138,18 @@ limitations under the License.
             <version>RELEASE80</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-modules-projectapi</artifactId>
+            <version>RELEASE80</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <artifactId>org-openide-loaders</artifactId>
+            <groupId>org.netbeans.api</groupId>
+            <type>jar</type>
+            <version>RELEASE80</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -141,8 +171,8 @@ limitations under the License.
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
             <plugin>

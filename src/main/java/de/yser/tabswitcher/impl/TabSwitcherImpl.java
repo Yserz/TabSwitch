@@ -16,8 +16,11 @@
 package de.yser.tabswitcher.impl;
 
 import de.yser.tabswitcher.TabSwitcher;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import org.netbeans.api.project.FileOwnerQuery;
+import org.netbeans.api.project.Project;
+import org.openide.filesystems.FileObject;
+import org.openide.loaders.DataObject;
 import org.openide.util.lookup.ServiceProvider;
 import org.openide.windows.*;
 
@@ -37,9 +40,23 @@ public class TabSwitcherImpl implements TabSwitcher {
 	}
 
 	@Override
-	public List<TopComponent> getAllOpenedTabs() {
+	public Map<Project, List<TopComponent>> getAllOpenedTabs() {
+		Map<Project, List<TopComponent>> projectEditorTabMap = new HashMap<>();
+		List<TopComponent> allEditorTabs = Arrays.asList(WindowManager.getDefault().getOpenedTopComponents(editorMode));
+
+		for (TopComponent topComponent : allEditorTabs) {
+			Project p = getProjectOfTab(topComponent);
+
+			List<TopComponent> projectEditorTabs = projectEditorTabMap.get(p);
+			if (projectEditorTabs == null) {
+				projectEditorTabs = new ArrayList<>();
+				projectEditorTabMap.put(p, projectEditorTabs);
+			}
+			projectEditorTabs.add(topComponent);
+		}
+
 		// May activate TabSwitch for other WindowModes too.
-		return Arrays.asList(WindowManager.getDefault().getOpenedTopComponents(editorMode));
+		return projectEditorTabMap;
 	}
 
 	@Override
@@ -49,40 +66,48 @@ public class TabSwitcherImpl implements TabSwitcher {
 
 	@Override
 	public TopComponent getRightTab() {
-		List<TopComponent> openTabs = getAllOpenedTabs();
-		int indexActive = openTabs.indexOf(getActiveTab());
+		Map<Project, List<TopComponent>> openTabs = getAllOpenedTabs();
+		TopComponent activeComponent = getActiveTab();
+		Project projectOfActiveComponent = getProjectOfTab(activeComponent);
+		List<TopComponent> projectTabGroup = openTabs.get(projectOfActiveComponent);
+
+		int indexActive = projectTabGroup.indexOf(activeComponent);
 		int indexRight = indexActive + 1;
 
-		if (indexRight >= openTabs.size()) {
-			if (openTabs.size() > 0) {
-				// select the first tab
+		if (projectTabGroup.size() > 0) {
+			if (indexRight % projectTabGroup.size() == 0) {
+				// get first tab
 				indexRight = 0;
-			} else {
-				// NO TABS ARE OPEN
-				return null;
 			}
+		} else {
+			// NO TABS ARE OPEN
+			return null;
 		}
 
-		return openTabs.get(indexRight);
+		return projectTabGroup.get(indexRight);
 	}
 
 	@Override
 	public TopComponent getLeftTab() {
-		List<TopComponent> openTabs = getAllOpenedTabs();
-		int indexActive = openTabs.indexOf(getActiveTab());
+		Map<Project, List<TopComponent>> openTabs = getAllOpenedTabs();
+		TopComponent activeComponent = getActiveTab();
+		Project projectOfActiveComponent = getProjectOfTab(activeComponent);
+		List<TopComponent> projectTabGroup = openTabs.get(projectOfActiveComponent);
+
+		int indexActive = projectTabGroup.indexOf(activeComponent);
 		int indexLeft = indexActive - 1;
 
-		if (indexLeft < 0) {
-			if (openTabs.size() > 0) {
-				// select the last tab
-				indexLeft = openTabs.size() - 1;
-			} else {
-				// NO TABS ARE OPEN
-				return null;
+		if (projectTabGroup.size() > 0) {
+			if (indexActive % projectTabGroup.size() == 0) {
+				// get last tab
+				indexLeft = projectTabGroup.size() - 1;
 			}
+		} else {
+			// NO TABS ARE OPEN
+			return null;
 		}
 
-		return openTabs.get(indexLeft);
+		return projectTabGroup.get(indexLeft);
 	}
 
 	@Override
@@ -100,6 +125,22 @@ public class TabSwitcherImpl implements TabSwitcher {
 		if (leftTab != null) {
 			leftTab.requestActive();
 		}
+	}
+
+	private Project getProjectOfTab(TopComponent topComponent) {
+		Project p = topComponent.getLookup().lookup(Project.class);
+		if (p == null) {
+			DataObject dob = topComponent.getLookup().lookup(DataObject.class);
+			if (dob != null) {
+				FileObject fo = dob.getPrimaryFile();
+				p = FileOwnerQuery.getOwner(fo);
+			} else {
+				System.out.println("Could not find DataObject!");
+			}
+		} else {
+			System.out.println("Could not find Project!");
+		}
+		return p;
 	}
 
 }

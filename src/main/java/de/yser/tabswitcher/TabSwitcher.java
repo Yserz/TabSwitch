@@ -16,6 +16,8 @@
 package de.yser.tabswitcher;
 
 import java.util.List;
+import java.util.Map;
+import org.netbeans.api.project.Project;
 import org.openide.windows.TopComponent;
 
 /**
@@ -31,7 +33,7 @@ public interface TabSwitcher {
 	 *
 	 * @return list of TopComponents.
 	 */
-	public List<TopComponent> getAllOpenedTabs();
+	public Map<Project, List<TopComponent>> getAllOpenedTabs();
 
 	/**
 	 * Returns the currently active tab in 'editor' WindowMode.
