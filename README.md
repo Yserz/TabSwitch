@@ -16,7 +16,7 @@ One could say NetBeans already provides this kind of functionality but in distin
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download the first snapshot-version from [here](https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140417.211348-2.nbm).
+You can download the first snapshot-version from [here](https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140418.124017-3.nbm).
 
 ## Bugs
 - No known Bugs until now ;)
