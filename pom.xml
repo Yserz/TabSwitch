@@ -28,7 +28,9 @@ limitations under the License.
         <b>TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way Google Chrome &copy; and XtraFinder&copy; do.</b>
         One could say NetBeans already provides this kind of functionality but in distinction to the build-in feature of the NetBeans IDE, TabSwitch does not loose the context of the project.
         So if you use for example the tab-row-per-project-feature TabSwitch will not suddenly jump between different tab-rows like the build-in NetBeans IDE feature does.
-        
+        <p>
+        <img src="https://raw.github.com/Yserz/TabSwitch/master/doc/TabSwitchTabs.gif" />
+        </p>
         <p>To switch to the left tab from the currently active one simply use: 
         <ul>
             <li>⌥ + ⌘ + ←  for Mac OS X,</li>
