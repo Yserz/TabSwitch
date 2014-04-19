@@ -24,6 +24,9 @@ import org.openide.util.*;
 import org.openide.util.NbBundle.Messages;
 
 /**
+ * Action to switch to the left tab from the currently active tab. This Action
+ * switches to the previous or last project group if the end of the current one
+ * is reached.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  * @since 1.0

@@ -29,6 +29,9 @@ import org.openide.util.LookupListener;
 import org.openide.util.NbBundle.Messages;
 
 /**
+ * Action to switch to the right tab from the currently active tab. This Action
+ * switches to the next or first project group if the end of the current one is
+ * reached.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  * @since 1.0

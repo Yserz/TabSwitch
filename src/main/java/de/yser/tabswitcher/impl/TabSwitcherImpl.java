@@ -138,6 +138,13 @@ public class TabSwitcherImpl implements TabSwitcher {
 		}
 	}
 
+	/**
+	 * Returns the last TopComponent tab of the upper project group from the
+	 * currently focused TopComponent.
+	 *
+	 * @return
+	 * @throws NoRelatedProjectFoundException
+	 */
 	private TopComponent getLastTabOfUpperProject() throws NoRelatedProjectFoundException {
 		LinkedHashMap<Project, LinkedList<TopComponent>> openTabs = getAllOpenedEditorTabs();
 		TopComponent activeComponent = getActiveTab();
@@ -178,6 +185,13 @@ public class TabSwitcherImpl implements TabSwitcher {
 		return null;
 	}
 
+	/**
+	 * Returns the first TopComponent tab of the below project group from the
+	 * currently focused TopComponent.
+	 *
+	 * @return TopComponent tab
+	 * @throws NoRelatedProjectFoundException
+	 */
 	private TopComponent getFirstTabOfBelowProject() throws NoRelatedProjectFoundException {
 		LinkedHashMap<Project, LinkedList<TopComponent>> openTabs = getAllOpenedEditorTabs();
 		TopComponent activeComponent = getActiveTab();
@@ -218,6 +232,14 @@ public class TabSwitcherImpl implements TabSwitcher {
 		return null;
 	}
 
+	/**
+	 * Returns the related project of the given TopComponent.
+	 *
+	 * @param topComponent
+	 * @return Project related to the TopComponent
+	 * @throws NoRelatedProjectFoundException if no project is related to the
+	 * given TopComonent.
+	 */
 	private Project getProjectOfTab(TopComponent topComponent) throws NoRelatedProjectFoundException {
 		Project p;
 		if (topComponent == null) {

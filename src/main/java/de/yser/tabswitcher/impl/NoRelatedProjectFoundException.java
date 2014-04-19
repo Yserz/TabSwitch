@@ -16,6 +16,7 @@
 package de.yser.tabswitcher.impl;
 
 /**
+ * This exception is thrown when a Component has no relation to an Project.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  */
