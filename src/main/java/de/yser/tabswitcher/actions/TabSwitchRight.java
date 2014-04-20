@@ -41,7 +41,7 @@ import org.openide.util.NbBundle.Messages;
 	id = "de.yser.tabswitcher.actions.TabSwitchRight"
 )
 @ActionRegistration(
-	iconBase = "de/yser/tabswitcher/actions/1rightarrow.png",
+	iconBase = "de/yser/tabswitcher/actions/arrowright.png",
 	displayName = "#CTL_TabSwitchRight"
 )
 @ActionReferences({

@@ -36,7 +36,7 @@ import org.openide.util.NbBundle.Messages;
 	id = "de.yser.tabswitcher.actions.TabSwitchLeft"
 )
 @ActionRegistration(
-	iconBase = "de/yser/tabswitcher/actions/1leftarrow.png",
+	iconBase = "de/yser/tabswitcher/actions/arrowleft.png",
 	displayName = "#CTL_TabSwitchLeft"
 )
 @ActionReferences({
