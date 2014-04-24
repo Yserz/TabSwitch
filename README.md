@@ -22,7 +22,7 @@ So if you use for example the tab-row-per-project-feature TabSwitch will not sud
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download the snapshot-version from <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140420.123832-6.nbm" download>here</a>.
+You can download the snapshot-version from <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitcher/1.0-SNAPSHOT/TabSwitcher-1.0-20140420.123832-6.nbm" type="application/octet-stream">here</a>.
 
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
