@@ -62,7 +62,6 @@ limitations under the License.
             <url>https://github.com/Yserz/</url>
         </developer>
     </developers>
-    
     <scm>
         <connection>scm:git:git@github.com:Yserz/TabSwitch.git</connection>
         <developerConnection>scm:git:git@github.com:Yserz/TabSwitch.git</developerConnection>
