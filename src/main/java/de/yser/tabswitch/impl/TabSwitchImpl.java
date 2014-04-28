@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.yser.tabswitcher.impl;
+package de.yser.tabswitch.impl;
 
-import de.yser.tabswitcher.TabSwitcher;
+import de.yser.tabswitch.TabSwitch;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,19 +29,19 @@ import org.openide.windows.*;
 
 /**
  *
- * Default implementation of {@link TabSwitcher}.
+ * Default implementation of {@link TabSwitch}.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  * @since 1.0
  */
-@ServiceProvider(service = TabSwitcher.class)
-public class TabSwitcherImpl implements TabSwitcher {
+@ServiceProvider(service = TabSwitch.class)
+public class TabSwitchImpl implements TabSwitch {
 
-	private static final Logger LOG = Logger.getLogger(TabSwitcherImpl.class.getName());
+	private static final Logger LOG = Logger.getLogger(TabSwitchImpl.class.getName());
 
 	private final Mode editorMode = WindowManager.getDefault().findMode("editor");
 
-	public TabSwitcherImpl() {
+	public TabSwitchImpl() {
 	}
 
 	@Override

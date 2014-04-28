@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.yser.tabswitcher.impl;
+package de.yser.tabswitch.impl;
 
 /**
  * This exception is thrown when a Component has no relation to an Project.

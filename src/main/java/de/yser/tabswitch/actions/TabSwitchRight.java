@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.yser.tabswitcher.actions;
+package de.yser.tabswitch.actions;
 
-import de.yser.tabswitcher.TabSwitcher;
+import de.yser.tabswitch.TabSwitch;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
@@ -38,10 +38,10 @@ import org.openide.util.NbBundle.Messages;
  */
 @ActionID(
 	category = "Tools",
-	id = "de.yser.tabswitcher.actions.TabSwitchRight"
+	id = "de.yser.tabswitch.actions.TabSwitchRight"
 )
 @ActionRegistration(
-	iconBase = "de/yser/tabswitcher/actions/arrowright.png",
+	iconBase = "de/yser/tabswitch/actions/arrowright.png",
 	displayName = "#CTL_TabSwitchRight"
 )
 @ActionReferences({
@@ -51,8 +51,8 @@ import org.openide.util.NbBundle.Messages;
 @Messages("CTL_TabSwitchRight=TabSwitch Right")
 public final class TabSwitchRight implements ActionListener {
 
-	Lookup.Result<TabSwitcher> result = Lookup.getDefault().lookupResult(TabSwitcher.class);
-	private Collection<? extends TabSwitcher> services = result.allInstances();
+	Lookup.Result<TabSwitch> result = Lookup.getDefault().lookupResult(TabSwitch.class);
+	private Collection<? extends TabSwitch> services = result.allInstances();
 
 	public TabSwitchRight() {
 
@@ -66,7 +66,7 @@ public final class TabSwitchRight implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent ev) {
-		for (TabSwitcher service : services) {
+		for (TabSwitch service : services) {
 			service.activateRightTab();
 		}
 	}

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.yser.tabswitcher;
+package de.yser.tabswitch;
 
-import de.yser.tabswitcher.impl.NoRelatedProjectFoundException;
+import de.yser.tabswitch.impl.NoRelatedProjectFoundException;
 import java.util.LinkedList;
 import java.util.Map;
 import org.netbeans.api.project.Project;
 import org.openide.windows.TopComponent;
 
 /**
- * The TabSwitcher looks for windows in the 'editor' WindowMode.
+ * The TabSwitch looks for windows in the 'editor' WindowMode.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  * @since 1.0
  */
-public interface TabSwitcher {
+public interface TabSwitch {
 
 	/**
 	 * Returns all open tabs in the 'editor' WindowMode.
@@ -48,7 +48,7 @@ public interface TabSwitcher {
 	 * WindowMode.
 	 *
 	 * @return TopComponent of the tab
-	 * @throws de.yser.tabswitcher.impl.NoRelatedProjectFoundException
+	 * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
 	 */
 	public TopComponent getNextTab() throws NoRelatedProjectFoundException;
 
@@ -57,7 +57,7 @@ public interface TabSwitcher {
 	 * WindowMode.
 	 *
 	 * @return TopComponent of the tab
-	 * @throws de.yser.tabswitcher.impl.NoRelatedProjectFoundException
+	 * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
 	 */
 	public TopComponent getLeftTab() throws NoRelatedProjectFoundException;
 
