@@ -11,18 +11,21 @@ So if you use for example the tab-row-per-project-feature TabSwitch will not sud
 
 ##### To switch to the left tab from the currently active one simply use 
 
-- <code>⌥ + ⌘ + &#8592; </code> for Mac OS X,
-- <code>Alt + Ctrl + &#8592; </code> for Windows & Linux or
+- <code>⌥ + ⌘ + &#8592; </code> on Mac OS X,
+- <code>Alt + Ctrl + &#8592; </code> on Windows & Linux or
 - Click on <code>Navigate -> TabSwitch Left</code>.
 
-##### To switch to the right tab simply use 
+##### To switch to the right tab use: 
 
-- <code>⌥ + ⌘ + &#10141; </code> for Mac OS X,
-- <code>Alt + Ctrl + &#10141; </code> for Windows & Linux or
+- <code>⌥ + ⌘ + &#10141; </code> on Mac OS X,
+- <code>Alt + Ctrl + &#10141; </code> on Windows & Linux or
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
+Further reading: <a href="http://beanbelt.blogspot.de/2014/04/introducing-tabswitch-netbeans-ide.html">Introducing TabSwitch - A NetBeans IDE Plugin for efficiently switching Editor Tabs</a>
+
 ## Download
-You can download TabSwitch from <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitch/0.1/TabSwitch-0.1.nbm" type="application/octet-stream">here</a>.
+You can download TabSwitch from the NetBeans Plugin Center <a href="http://plugins.netbeans.org/plugin/54634/?show=true">here</a> or <br />
+from the repository <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitch/0.1/TabSwitch-0.1.nbm" type="application/octet-stream">here</a>.
 
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
