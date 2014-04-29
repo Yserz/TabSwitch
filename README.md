@@ -23,14 +23,15 @@ Further reading: <a href="http://beanbelt.blogspot.de/2014/04/introducing-tabswi
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download TabSwitch from the NetBeans Plugin Center <a href="http://plugins.netbeans.org/plugin/54634/?show=true">here</a> or <br />
+You can download TabSwitch
+from the NetBeans Plugin Center <a href="http://plugins.netbeans.org/plugin/54634/?show=true">here</a> or <br />
 from the repository <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitch/0.1/TabSwitch-0.1.nbm" type="application/octet-stream">here</a>.
 
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
 
-# Some Notes:
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+# Some Internal Notes:
 ## Sources
 
 ### Netbeans Platform Sources
@@ -51,10 +52,9 @@ If you find a bug or have an idea for a feature, feel free to post it [here](htt
 - [HTML Codes](http://character-code.com/arrows-html-codes.php)
 
 ## Making a Release
+<code>mvn release:clean -Dnbm.signing.keystorepassword={password}</code><br />
+<code>mvn release:prepare -Dnbm.signing.keystorepassword={password}</code><br />
+<code>mvn release:perform -Dnbm.signing.keystorepassword={password}</code><br />
 
-<code>mvn release:clean -Dnbm.signing.keystorepassword={password}</code>
-<code>mvn release:prepare -Dnbm.signing.keystorepassword={password}</code>
-<code>mvn release:perform -Dnbm.signing.keystorepassword={password}</code>
-
-if something isn't working (before perform):
+if something isn't working (before perform):<br />
 <code>mvn release:rollback</code>
