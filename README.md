@@ -30,13 +30,7 @@ from the repository <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ow
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
 
-## Making a Release
-- [Maven Release Plugin: The Final Nail in the Coffin](http://axelfontaine.com/blog/final-nail.html)
-
-1. Checking the software out: <code>git clone</code>
-2. Giving it a version: <code>mvn versions:set</code>
-3. Building, testing, packaging and deploying it to an artifact repository: <code>mvn deploy</code>
-4. Tagging this state in SCM: <code>mvn scm:tag</code>
+# Some Notes:
 
 ## Sources
 
@@ -56,3 +50,12 @@ If you find a bug or have an idea for a feature, feel free to post it [here](htt
 ### Markdown Sources
 - [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax)
 - [HTML Codes](http://character-code.com/arrows-html-codes.php)
+
+## Making a Release
+
+<code>mvn release:clean -Dnbm.signing.keystorepassword={password}</code>
+<code>mvn release:prepare -Dnbm.signing.keystorepassword={password}</code>
+<code>mvn release:perform -Dnbm.signing.keystorepassword={password}</code>
+
+if something isn't working (before perform):
+<code>mvn release:rollback</code>
