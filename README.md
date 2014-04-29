@@ -4,7 +4,8 @@ TabSwitch allows you to switch the editor-tabs in the NetBeans&copy; IDE the way
 One could say NetBeans already provides this kind of functionality but in distinction to the build-in feature of the NetBeans IDE, TabSwitch does not loose the context of the project.
 So if you use for example the tab-row-per-project-feature TabSwitch will not suddenly jump between different tab-rows like the build-in NetBeans IDE feature does.
 
-Further reading: <a href="http://beanbelt.blogspot.de/2014/04/introducing-tabswitch-netbeans-ide.html">Introducing TabSwitch - A NetBeans IDE Plugin for efficiently switching Editor Tabs</a>
+Further reading: <br />
+<a href="http://beanbelt.blogspot.de/2014/04/introducing-tabswitch-netbeans-ide.html">Introducing TabSwitch - A NetBeans IDE Plugin for efficiently switching Editor Tabs</a>
 
 ![TabSwitch with Shortcuts](https://raw.github.com/Yserz/TabSwitch/master/doc/TabSwitchTabs.gif)
 
@@ -23,13 +24,14 @@ Further reading: <a href="http://beanbelt.blogspot.de/2014/04/introducing-tabswi
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download TabSwitch
+You can download TabSwitch<br />
 from the NetBeans Plugin Center <a href="http://plugins.netbeans.org/plugin/54634/?show=true">here</a> or <br />
 from the repository <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitch/0.1/TabSwitch-0.1.nbm" type="application/octet-stream">here</a>.
 
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
 
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 # Some Internal Notes:
 ## Sources
