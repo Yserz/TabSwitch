@@ -29,45 +29,43 @@ import org.openide.util.LookupListener;
 import org.openide.util.NbBundle.Messages;
 
 /**
- * Action to switch to the right tab from the currently active tab. This Action
- * switches to the next or first project group if the end of the current one is
- * reached.
+ * Action to switch to the right tab from the currently active tab. This Action switches to the next or first project group if
+ * the end of the current one is reached.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
- * @since 1.0
+ * @since 0.1
  */
 @ActionID(
-	category = "Tools",
-	id = "de.yser.tabswitch.actions.TabSwitchRight"
+        category = "Tools",
+        id = "de.yser.tabswitch.actions.TabSwitchRight"
 )
 @ActionRegistration(
-	iconBase = "de/yser/tabswitch/actions/arrowright.png",
-	displayName = "#CTL_TabSwitchRight"
+        iconBase = "de/yser/tabswitch/actions/arrowright.png",
+        displayName = "#CTL_TabSwitchRight"
 )
 @ActionReferences({
-	@ActionReference(path = "Menu/GoTo", position = 3000),
-	@ActionReference(path = "Shortcuts", name = "A-D-RIGHT")
+    @ActionReference(path = "Menu/GoTo", position = 3000)
+    ,@ActionReference(path = "Shortcuts", name = "A-D-RIGHT")
 })
 @Messages("CTL_TabSwitchRight=TabSwitch Right")
 public final class TabSwitchRight implements ActionListener {
 
-	Lookup.Result<TabSwitch> result = Lookup.getDefault().lookupResult(TabSwitch.class);
-	private Collection<? extends TabSwitch> services = result.allInstances();
+    Lookup.Result<TabSwitch> result = Lookup.getDefault().lookupResult(TabSwitch.class);
+    private Collection<? extends TabSwitch> services = result.allInstances();
 
-	public TabSwitchRight() {
+    public TabSwitchRight() {
+        result.addLookupListener(new LookupListener() {
+            @Override
+            public void resultChanged(LookupEvent event) {
+                services = result.allInstances();
+            }
+        });
+    }
 
-		result.addLookupListener(new LookupListener() {
-			@Override
-			public void resultChanged(LookupEvent event) {
-				services = result.allInstances();
-			}
-		});
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent ev) {
-		for (TabSwitch service : services) {
-			service.activateRightTab();
-		}
-	}
+    @Override
+    public void actionPerformed(ActionEvent ev) {
+        for (TabSwitch service : services) {
+            service.activateRightTab();
+        }
+    }
 }

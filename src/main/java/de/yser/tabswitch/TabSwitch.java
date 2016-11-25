@@ -25,52 +25,48 @@ import org.openide.windows.TopComponent;
  * The TabSwitch looks for windows in the 'editor' WindowMode.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
- * @since 1.0
+ * @since 0.1
  */
 public interface TabSwitch {
 
-	/**
-	 * Returns all open tabs in the 'editor' WindowMode.
-	 *
-	 * @return list of TopComponents.
-	 */
-	public Map<Project, LinkedList<TopComponent>> getAllOpenedEditorTabs();
+    /**
+     * Returns all open tabs in the 'editor' WindowMode.
+     *
+     * @return list of TopComponents.
+     */
+    public Map<Project, LinkedList<TopComponent>> getAllOpenedEditorTabs();
 
-	/**
-	 * Returns the currently active tab in 'editor' WindowMode.
-	 *
-	 * @return TopComponent of active window.
-	 */
-	public TopComponent getActiveTab();
+    /**
+     * Returns the currently active tab in 'editor' WindowMode.
+     *
+     * @return TopComponent of active window.
+     */
+    public TopComponent getActiveTab();
 
-	/**
-	 * Returns the right tab from the currently active tab in 'editor'
-	 * WindowMode.
-	 *
-	 * @return TopComponent of the tab
-	 * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
-	 */
-	public TopComponent getNextTab() throws NoRelatedProjectFoundException;
+    /**
+     * Returns the right tab from the currently active tab in 'editor' WindowMode.
+     *
+     * @return TopComponent of the tab
+     * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
+     */
+    public TopComponent getNextTab() throws NoRelatedProjectFoundException;
 
-	/**
-	 * Returns the left tab from the currently active tab in 'editor'
-	 * WindowMode.
-	 *
-	 * @return TopComponent of the tab
-	 * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
-	 */
-	public TopComponent getLeftTab() throws NoRelatedProjectFoundException;
+    /**
+     * Returns the left tab from the currently active tab in 'editor' WindowMode.
+     *
+     * @return TopComponent of the tab
+     * @throws de.yser.tabswitch.impl.NoRelatedProjectFoundException
+     */
+    public TopComponent getLeftTab() throws NoRelatedProjectFoundException;
 
-	/**
-	 * Sets the focus on the right tab of the currently active tab in 'editor'
-	 * WindowMode.
-	 */
-	public void activateRightTab();
+    /**
+     * Sets the focus on the right tab of the currently active tab in 'editor' WindowMode.
+     */
+    public void activateRightTab();
 
-	/**
-	 * Sets the focus on the left tab of the currently active tab in 'editor'
-	 * WindowMode.
-	 */
-	public void activateLeftTab();
+    /**
+     * Sets the focus on the left tab of the currently active tab in 'editor' WindowMode.
+     */
+    public void activateLeftTab();
 
 }

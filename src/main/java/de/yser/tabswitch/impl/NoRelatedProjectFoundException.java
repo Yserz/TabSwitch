@@ -16,29 +16,28 @@
 package de.yser.tabswitch.impl;
 
 /**
- * This exception is thrown when a Component has no relation to an Project.
+ * This exception is thrown when a Component has no relation to a project.
  *
  * @author Michael Koppen (michael.koppen at googlemail.com)
  */
 public class NoRelatedProjectFoundException extends Exception {
 
-	public NoRelatedProjectFoundException() {
-	}
+    public NoRelatedProjectFoundException() {
+    }
 
-	public NoRelatedProjectFoundException(String message) {
-		super(message);
-	}
+    public NoRelatedProjectFoundException(String message) {
+        super(message);
+    }
 
-	public NoRelatedProjectFoundException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public NoRelatedProjectFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
 
-	public NoRelatedProjectFoundException(Throwable cause) {
-		super(cause);
-	}
+    public NoRelatedProjectFoundException(Throwable cause) {
+        super(cause);
+    }
 
-	public NoRelatedProjectFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
-	}
-
+    public NoRelatedProjectFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
 }
