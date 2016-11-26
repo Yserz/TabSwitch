@@ -24,9 +24,9 @@ Further reading: <br />
 - Click on <code>Navigate -> TabSwitch Right</code>.
 
 ## Download
-You can download TabSwitch<br />
-from the NetBeans Plugin Center <a href="http://plugins.netbeans.org/plugin/54634/?show=true">here</a> or <br />
-from the repository <a href="https://bitbucket.org/api/1.0/repositories/Yserz/ownmavenrepo/raw/HEAD/de/yser/TabSwitch/0.1/TabSwitch-0.1.nbm" type="application/octet-stream">here</a>.
+You can download TabSwitch from<br />
+<a href="http://plugins.netbeans.org/plugin/54634/?show=true">NetBeans Plugin Center</a> or<br />
+<a href="https://github.com/Yserz/TabSwitch/releases">Github Releases</a>.
 
 ## Issue Management
 If you find a bug or have an idea for a feature, feel free to post it [here](https://github.com/Yserz/TabSwitch/issues).
@@ -54,7 +54,7 @@ If you find a bug or have an idea for a feature, feel free to post it [here](htt
 - [HTML Codes](http://character-code.com/arrows-html-codes.php)
 
 ## Making a Release
-<code>mvn release:clean -Dnbm.signing.keystorepassword={password}</code><br />
+<code>mvn release:clean</code><br />
 <code>mvn release:prepare -Dnbm.signing.keystorepassword={password}</code><br />
 <code>mvn release:perform -Dnbm.signing.keystorepassword={password}</code><br />
 
